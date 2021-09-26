@@ -5955,7 +5955,6 @@ __metadata:
     "@typescript-eslint/parser": ^4.31.2
     eslint: ^7.32.0
     eslint-config-airbnb: ^18.2.1
-    eslint-config-airbnb-base: ^14.2.1
     eslint-config-airbnb-typescript: ^14.0.0
     eslint-config-prettier: ^8.3.0
     eslint-plugin-import: ^2.24.2
@@ -6285,7 +6284,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-airbnb-base@npm:^14.2.1":
+"eslint-config-airbnb-base@npm:*, eslint-config-airbnb-base@npm:^14.2.1":
   version: 14.2.1
   resolution: "eslint-config-airbnb-base@npm:14.2.1"
   dependencies:
