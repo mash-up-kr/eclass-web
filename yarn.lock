@@ -5691,7 +5691,7 @@ __metadata:
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.26.0
     eslint-plugin-react-hooks: ^4.2.0
-    husky: ^7.0.2
+    husky: ^7.0.0
     lint-staged: ^11.1.2
     prettier: ^2.4.1
     react: ^17.0.2
@@ -7710,7 +7710,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"husky@npm:^7.0.2":
+"husky@npm:^7.0.0":
   version: 7.0.2
   resolution: "husky@npm:7.0.2"
   bin:
