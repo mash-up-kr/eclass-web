@@ -41,6 +41,7 @@
     "build": "react-scripts build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx",
+    "lint:style": "stylelint '**/*.{scss,css}'",
     "prepare": "husky install"
   },
   "browserslist": {
@@ -61,8 +62,12 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": [
-      "eslint --cache --fix"
+    "*.{ts,tsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ],
+    "*.{scss,css}": [
+      "lint:style --fix"
     ]
   }
 }
