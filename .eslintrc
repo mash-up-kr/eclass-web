@@ -7,9 +7,10 @@
   "extends": [
     "airbnb",
     "airbnb-typescript",
-    "prettier",
+    "eslint:recommended",
     "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
+    "prettier",
     "plugin:prettier/recommended"
   ],
   "rules": {
@@ -22,6 +23,16 @@
         "alphabetize": {
           "order": "asc"
         }
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
       }
     ]
   }
