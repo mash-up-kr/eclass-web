@@ -43,7 +43,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint --fix --ext .js,.jsx,.ts,.tsx",
     "lint:style": "stylelint '**/*.{scss,css}'",
-    "prepare": "husky install"
+    "postinstall": "husky install"
   },
   "browserslist": {
     "production": [
