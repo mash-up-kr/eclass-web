@@ -1,0 +1,27 @@
+@use 'modern-css-reset';
+
+* {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  line-height: normal;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+}
+
+input {
+  outline: none;
+  -webkit-appearance: none;
+}
+
+textarea {
+  outline: none;
+  -webkit-appearance: none;
+}
