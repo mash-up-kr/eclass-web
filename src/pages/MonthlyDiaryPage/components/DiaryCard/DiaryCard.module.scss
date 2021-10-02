@@ -26,20 +26,20 @@
   }
 
   &__summary {
+    @include flexSpaceBetween(column);
+
     #{$self}__content {
       @include overflowTextVertical(3);
 
       color: #484747;
       font-weight: bold;
       font-size: 14px;
-      line-height: 21px;
     }
 
     #{$self}__extra-content {
       color: #a99f8b;
       font-weight: bold;
       font-size: 12px;
-      line-height: 29px;
     }
   }
 
