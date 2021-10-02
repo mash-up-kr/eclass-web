@@ -10,7 +10,7 @@ const StepOne = ({ name, onChangeName }: StepOneProps) => {
       <div className={styles['step-one__content']}>
         <p className={styles['step-one__title']}>반려동물의 이름은 무엇인가요?</p>
         <div>
-          <input className={styles['step-one__input']} value={name} onChange={onChangeName} />
+          <input className={styles['step-one__input']} value={name} onChange={onChangeName} placeholder="알려주세요!" />
         </div>
         {/* Date Set button */}
         <p className={styles['step-one__label']}>태어난 날짜</p> {/* margin 설정 label */}

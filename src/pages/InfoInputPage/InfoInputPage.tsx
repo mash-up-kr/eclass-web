@@ -5,8 +5,11 @@ import StepOne from './components/Steps/StepOne';
 import StepTwo from './components/Steps/StepTwo';
 import useInfoInput from './hooks/useInfoInput';
 
+import classNames from 'classnames/bind';
 import { useMemo, useState } from 'react';
 import { useSetRecoilState, atom } from 'recoil';
+
+const cx = classNames.bind(styles);
 
 export const NAME_INFO = atom({
   key: 'NameInfo',
@@ -54,10 +57,14 @@ const InfoInputPage = () => {
       <div className={styles['input-form__content']}>{stepContent}</div>
 
       {/* button */}
-      <button type="button" disabled={name === ''} className={styles['input-form__button']} onClick={handleNextButton}>
+      <button
+        type="button"
+        disabled={name === ''}
+        className={cx('input-form__button', { 'input-form__button--disabled': name === '' })}
+        onClick={handleNextButton}
+      >
         {buttonText}
       </button>
-      <input type="date" />
       {/* button */}
     </div>
   );
