@@ -1,0 +1,6 @@
+@use 'styles/variables' as *;
+
+.monthly-diary {
+  margin-top: calc($header-height + 16px);
+  padding: 0 14px;
+}
