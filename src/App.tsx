@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { Route, Switch } from 'react-router';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 // Sample Code
 const LazyMainPage = lazy(() => import(/* webpackChunkName: "Main" */ 'pages/MainPage'));
@@ -7,9 +7,11 @@ const LazyMainPage = lazy(() => import(/* webpackChunkName: "Main" */ 'pages/Mai
 const App = () => {
   return (
     <Suspense fallback={null}>
-      <Switch>
-        <Route exact path="/" component={LazyMainPage} />
-      </Switch>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={LazyMainPage} />
+        </Switch>
+      </BrowserRouter>
     </Suspense>
   );
 };
