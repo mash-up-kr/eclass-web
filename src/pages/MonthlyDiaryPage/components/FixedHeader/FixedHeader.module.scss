@@ -4,6 +4,8 @@
 .fixed-header {
   @include flexSpaceBetween(row);
 
+  $self: &;
+
   position: fixed;
   top: 0;
   z-index: z-index(fixed-header);
@@ -18,12 +20,20 @@
     margin-right: auto;
   }
 
-  &__month {
-    flex: 1;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
+  &__month-picker {
+    @include flexCenter(vertical);
+
+    #{$self}__month {
+      flex: 1;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: center;
+    }
+
+    #{$self}__caret-icon {
+      margin-left: 4px;
+    }
   }
 
   &__calendar {
