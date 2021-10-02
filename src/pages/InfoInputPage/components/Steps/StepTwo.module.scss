@@ -1,0 +1,42 @@
+.step-two {
+  &__content {
+    padding: 0 16px;
+  }
+
+  &__title {
+    margin-bottom: 58px;
+    color: #000;
+    font-weight: 700;
+    font-size: 28px;
+  }
+
+  &__input {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 107px;
+    padding-bottom: 7px;
+    border: none;
+    border-bottom: 1px solid #5a5a5f;
+    border-bottom-color: #5a5a5f;
+  }
+
+  &__label {
+    margin-bottom: 7px;
+    color: #101010;
+    font-weight: 500;
+    font-size: 17px;
+  }
+
+  &__date-button {
+    display: flex;
+    height: 47px;
+    padding: 12px 0;
+    border: 1px solid #4f4f4f;
+    border-radius: 12px;
+  }
+
+  &__date-button-text {
+    margin: 0 auto;
+    color: #101010;
+  }
+}
