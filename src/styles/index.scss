@@ -1,11 +1,13 @@
 @use 'modern-css-reset';
+@use 'styles/font.scss';
 
 $background-color: #fdf7ea;
 
 * {
+  font-family: 'SF Pro Display', 'Noto Sans KR', system-ui;
+  user-select: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-touch-callout: none;
-  user-select: none;
 }
 
 body {
