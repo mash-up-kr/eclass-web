@@ -11,8 +11,8 @@
   z-index: z-index(fixed-header);
   align-items: center;
   width: 100%;
-  height: $header-height;
-  padding: 0 20px;
+  height: $header-height-with-safe-area;
+  padding: $safe-area-inset-top 20px 0;
   background-color: inherit;
 
   &__logo {
