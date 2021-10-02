@@ -1,0 +1,48 @@
+@use 'styles/utils' as *;
+
+.diary-card {
+  $self: &;
+
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+
+  &__header {
+    @include flexCenter(vertical);
+
+    #{$self}__date {
+      margin-left: 8px;
+      color: #356859;
+      font-weight: 800;
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__article {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &__summary {
+    #{$self}__content {
+      color: #484747;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    #{$self}__extra-content {
+      color: #a99f8b;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: 29px;
+    }
+  }
+
+  &__thumbnail {
+    margin-left: 16px;
+    border-radius: 16px;
+  }
+}
