@@ -16,5 +16,11 @@ module.exports = {
         ignore: ['after-comment', 'after-declaration', 'first-nested', 'inside-single-line-block'],
       },
     ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global"]
+      }
+    ]
   },
 };
