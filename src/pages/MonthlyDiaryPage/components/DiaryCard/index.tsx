@@ -3,9 +3,15 @@ import DUMMY_DOG_THUMBNAIL from 'assets/img_dummy_dog.png';
 
 import style from './DiaryCard.module.scss';
 
-const DiaryCard = () => {
+import cx from 'classnames';
+
+interface DiaryCardProps {
+  classNames?: string;
+}
+
+const DiaryCard = ({ classNames }: DiaryCardProps) => {
   return (
-    <div className={style['diary-card']}>
+    <div className={cx(style['diary-card'], classNames)}>
       <header className={style['diary-card__header']}>
         <GreenDotIcon />
         <p className={style['diary-card__date']}>14. SAT</p>

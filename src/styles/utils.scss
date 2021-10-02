@@ -1,3 +1,7 @@
+$z-index: (
+  fixed-header: 100,
+);
+
 @mixin flexCenter($direction) {
   display: flex;
 
@@ -34,4 +38,8 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   word-break: all;
+}
+
+@function z-index($key) {
+  @return map-get($z-index, $key);
 }

@@ -6,10 +6,12 @@
 
   position: fixed;
   top: 0;
+  z-index: z-index(fixed-header);
   align-items: center;
   width: 100%;
   height: $header-height;
   padding: 0 20px;
+  background-color: inherit;
 
   &__logo {
     flex: 1;
