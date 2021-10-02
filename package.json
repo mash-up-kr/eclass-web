@@ -7,6 +7,7 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.3.1",
+    "components": "link:./src/components",
     "modern-css-reset": "^1.4.0",
     "pages": "link:./src/pages",
     "react": "^17.0.2",
