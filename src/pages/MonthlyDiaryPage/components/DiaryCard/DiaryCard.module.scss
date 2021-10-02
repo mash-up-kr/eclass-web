@@ -27,6 +27,8 @@
 
   &__summary {
     #{$self}__content {
+      @include overflowTextVertical(3);
+
       color: #484747;
       font-weight: bold;
       font-size: 14px;

@@ -13,7 +13,7 @@ const DiaryCard = () => {
       <div className={style['diary-card__article']}>
         <div className={style['diary-card__summary']}>
           <p className={style['diary-card__content']}>
-            오늘은 보리랑 동두천에 산책을 갔는데 아니 글쎄 옆집 철수를 만나가지구 넘 반갑...
+            오늘은 보리랑 동두천에 산책을 갔는데 아니 글쎄 옆집 철수를 만나가지구 넘 반갑더라
           </p>
           <p className={style['diary-card__extra-content']}>집사 &#183; 댓글12</p>
         </div>
