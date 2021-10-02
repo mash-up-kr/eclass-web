@@ -1,6 +1,14 @@
 @use 'styles/variables' as *;
 
 .monthly-diary {
-  margin-top: calc($header-height + 16px);
+  $self: &;
+
+  margin: calc($header-height + 16px) 0 55px;
   padding: 0 14px;
+
+  &__list {
+    #{$self}__item {
+      margin-top: 14px;
+    }
+  }
 }

@@ -7,7 +7,26 @@ const MonthlyDiaryPage = () => {
     <>
       <FixedHeader />
       <div className={style['monthly-diary']}>
-        <DiaryCard />
+        <ul className={style['monthly-diary__list']}>
+          <li className={style['monthly-diary__item']}>
+            <DiaryCard />
+          </li>
+          <li className={style['monthly-diary__item']}>
+            <DiaryCard />
+          </li>
+          <li className={style['monthly-diary__item']}>
+            <DiaryCard />
+          </li>
+          <li className={style['monthly-diary__item']}>
+            <DiaryCard />
+          </li>
+          <li className={style['monthly-diary__item']}>
+            <DiaryCard />
+          </li>
+          <li className={style['monthly-diary__item']}>
+            <DiaryCard />
+          </li>
+        </ul>
       </div>
     </>
   );

@@ -19,6 +19,10 @@ body {
   background-color: $background-color;
 }
 
+#root {
+  background-color: inherit;
+}
+
 input {
   outline: none;
   -webkit-appearance: none;
@@ -27,4 +31,12 @@ input {
 textarea {
   outline: none;
   -webkit-appearance: none;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
 }
