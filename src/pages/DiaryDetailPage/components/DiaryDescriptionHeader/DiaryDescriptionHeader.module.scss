@@ -1,0 +1,31 @@
+@use 'styles/utils' as *;
+
+.diary-description-header {
+  display: flex;
+
+  &__badge {
+    @include flexCenter(all);
+
+    margin-right: 8px;
+  }
+
+  &__info {
+    color: #a09d96;
+    font-size: 12px;
+    line-height: 21px;
+  }
+
+  &__title {
+    color: #484747;
+    font-size: 16px;
+  }
+
+  &__author {
+    &::before {
+      display: inline-block;
+      padding: 0 3px;
+      color: #a09d96;
+      content: '·';
+    }
+  }
+}
