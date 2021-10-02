@@ -36,12 +36,12 @@
       @include overflowTextVertical(3);
 
       color: #484747;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 14px;
     }
 
     #{$self}__extra-content {
-      color: #a99f8b;
+      color: #a09d96;
       font-weight: bold;
       font-size: 12px;
     }
