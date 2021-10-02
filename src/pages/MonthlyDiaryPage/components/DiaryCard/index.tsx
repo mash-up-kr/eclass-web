@@ -1,4 +1,5 @@
 import { ReactComponent as GreenDotIcon } from 'assets/ic_green_dot.svg';
+import { ReactComponent as MoreHorizontalIcon } from 'assets/ic_more_horizontal.svg';
 import DUMMY_DOG_THUMBNAIL from 'assets/img_dummy_dog.png';
 
 import style from './DiaryCard.module.scss';
@@ -15,6 +16,7 @@ const DiaryCard = ({ classNames }: DiaryCardProps) => {
       <header className={style['diary-card__header']}>
         <GreenDotIcon />
         <p className={style['diary-card__date']}>14. SAT</p>
+        <MoreHorizontalIcon className={style['diary-card__more']} />
       </header>
       <div className={style['diary-card__article']}>
         <div className={style['diary-card__summary']}>

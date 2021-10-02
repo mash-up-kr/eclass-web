@@ -18,6 +18,10 @@
       font-size: 18px;
       line-height: 21px;
     }
+
+    #{$self}__more {
+      margin-left: auto;
+    }
   }
 
   &__article {
