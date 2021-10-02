@@ -5,6 +5,7 @@ import DUMMY_DOG_THUMBNAIL from 'assets/img_dummy_dog.png';
 import style from './DiaryCard.module.scss';
 
 import cx from 'classnames';
+import SVGButton from 'components/SVGButton';
 
 interface DiaryCardProps {
   classNames?: string;
@@ -14,9 +15,9 @@ const DiaryCard = ({ classNames }: DiaryCardProps) => {
   return (
     <div className={cx(style['diary-card'], classNames)}>
       <header className={style['diary-card__header']}>
-        <GreenDotIcon />
+        <SVGButton icon={<GreenDotIcon />} />
         <p className={style['diary-card__date']}>14. SAT</p>
-        <MoreHorizontalIcon className={style['diary-card__more']} />
+        <SVGButton icon={<MoreHorizontalIcon />} className={style['diary-card__more']} />
       </header>
       <div className={style['diary-card__article']}>
         <div className={style['diary-card__summary']}>
