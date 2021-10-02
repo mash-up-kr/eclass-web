@@ -1,0 +1,17 @@
+@use 'styles/utils' as *;
+
+.diary-detail-page {
+  &__footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 1;
+
+    @include flexCenter(vertical);
+    @include flexSpaceBetween;
+
+    width: 100%;
+    height: 56px;
+    padding: 0 24px;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.12);
+  }
+}
