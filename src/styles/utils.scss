@@ -1,0 +1,29 @@
+@mixin flexCenter($direction) {
+  display: flex;
+
+  @if $direction == 'horizontal' {
+    justify-content: center;
+  }
+
+  @else if $direction == 'vertical' {
+    align-items: center;
+  }
+
+  @else if $direction == 'all' {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@mixin flexSpaceBetween($flexDirection: 'row') {
+  display: flex;
+  justify-content: space-between;
+
+  @if $flexDirection == 'row' {
+    flex-direction: row;
+  }
+
+  @else if $flexDirection == 'column' {
+    flex-direction: column;
+  }
+}
