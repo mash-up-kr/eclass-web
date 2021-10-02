@@ -1,5 +1,11 @@
+import FixedHeader from './components/FixedHeader';
+
 const MonthlyDiaryPage = () => {
-  return <></>;
+  return (
+    <>
+      <FixedHeader />
+    </>
+  );
 };
 
 export default MonthlyDiaryPage;
