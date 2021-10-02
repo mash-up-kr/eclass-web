@@ -5991,6 +5991,7 @@ __metadata:
     stylelint-scss: ^3.21.0
     swr: ^1.0.1
     typescript: ^4.4.3
+    utils: "link:./src/utils"
   languageName: unknown
   linkType: soft
 
@@ -16592,6 +16593,12 @@ typescript@^4.4.3:
   checksum: c81095493225ecfc28add49c106ca4f09cdf56bc66731aa8dabc2edbbccb1e1bfe2de6a115e5c6a380d3ea166d1636410b62ef216bb07b3feb1cfde1d95d5080
   languageName: node
   linkType: hard
+
+"utils@link:./src/utils::locator=eclass-web%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "utils@link:./src/utils::locator=eclass-web%40workspace%3A."
+  languageName: node
+  linkType: soft
 
 "uuid@npm:^3.3.2, uuid@npm:^3.4.0":
   version: 3.4.0
