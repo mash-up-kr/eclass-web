@@ -10,9 +10,10 @@
   top: 0;
   z-index: z-index(fixed-header);
   align-items: center;
+  box-sizing: content-box;
   width: 100%;
   height: $header-height;
-  padding: 0 20px;
+  padding: $safe-area-inset-top 20px 0;
   background-color: inherit;
 
   &__logo {

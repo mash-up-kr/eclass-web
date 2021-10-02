@@ -1,1 +1,3 @@
 $header-height: 52px;
+$safe-area-inset-top: env(safe-area-inset-top, 20px);
+$header-height-with-safe-area: calc($header-height + $safe-area-inset-top);
