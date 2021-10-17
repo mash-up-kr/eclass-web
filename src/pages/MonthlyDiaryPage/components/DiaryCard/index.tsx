@@ -10,12 +10,12 @@ import SVGButton from 'components/SVGButton';
 const cx = classNames.bind(styles);
 
 interface DiaryCardProps {
-  additionalClassNames?: string;
+  className?: string;
 }
 
-const DiaryCard = ({ additionalClassNames }: DiaryCardProps) => {
+const DiaryCard = ({ className }: DiaryCardProps) => {
   return (
-    <div className={cx('diary-card', { additionalClassNames })}>
+    <div className={cx('diary-card', { className })}>
       <header className={cx('diary-card__header')}>
         <SVGButton icon={<GreenDotIcon />} />
         <p className={cx('diary-card__date')}>14. SAT</p>
