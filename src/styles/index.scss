@@ -10,6 +10,11 @@ $background-color: #fdf7ea;
   -webkit-touch-callout: none;
 }
 
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
 body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
