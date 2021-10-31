@@ -2,7 +2,7 @@
 @use 'styles/utils' as *;
 
 .fixed-header {
-  @include flexSpaceBetween(row);
+  @include flexCenter(horizontal);
 
   $self: &;
 

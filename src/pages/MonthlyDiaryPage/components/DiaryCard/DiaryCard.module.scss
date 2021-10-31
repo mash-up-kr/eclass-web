@@ -6,17 +6,16 @@
   padding: 2rem;
   background: white;
   border-radius: 1.5rem;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
 
   &__header {
     @include flexCenter(vertical);
 
     #{$self}__date {
       margin-left: 8px;
-      color: #356859;
-      font-weight: 800;
-      font-size: 1.8rem;
-      line-height: 2.1;
+      color: #484747;
+      font-weight: 500;
+      font-size: 1.6rem;
+      line-height: 2.4;
     }
 
     #{$self}__more {
@@ -43,7 +42,7 @@
 
     #{$self}__extra-content {
       color: #a09d96;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 1.2rem;
     }
   }
