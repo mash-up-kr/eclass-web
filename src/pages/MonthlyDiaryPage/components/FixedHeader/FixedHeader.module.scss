@@ -12,7 +12,7 @@
   align-items: center;
   width: 100%;
   height: $header-height-with-safe-area;
-  padding: $safe-area-inset-top 20px 0;
+  padding: $safe-area-inset-top 2rem 0;
   background-color: inherit;
 
   &__logo {
@@ -27,7 +27,7 @@
       flex: 1;
       font-weight: bold;
       font-size: 1.6rem;
-      line-height: 26px;
+      line-height: 2.6;
       text-align: center;
     }
 
