@@ -5844,12 +5844,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dom7@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "dom7@npm:3.0.0"
+"dom7@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "dom7@npm:4.0.1"
   dependencies:
-    ssr-window: ^3.0.0-alpha.1
-  checksum: 5a1b8979ed35afb9cc6714ff048ce4599a24fd8a11069bb52a61ccae1bdc0716c2bd6b07c4338856d5664d984c0bee9f6b7616a01ffa09daaebfe02fee016e66
+    ssr-window: ^4.0.0
+  checksum: 5572cb46f25e447f3ad0bbedccb73c1a381459fab30aa3688579f52601fdc9d1c0f6b06ea84dff1aecb5f550c435f904f6b3649625cee2f141daf811f960803a
   languageName: node
   linkType: hard
 
@@ -6013,7 +6013,7 @@ __metadata:
     stylelint-config-standard: ^22.0.0
     stylelint-order: ^4.1.0
     stylelint-scss: ^3.21.0
-    swiper: 6.8.4
+    swiper: ^7.2.0
     swr: ^1.0.1
     typescript: ^4.4.3
     utils: "link:./src/utils"
@@ -15011,10 +15011,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"ssr-window@npm:^3.0.0, ssr-window@npm:^3.0.0-alpha.1":
-  version: 3.0.0
-  resolution: "ssr-window@npm:3.0.0"
-  checksum: e619db7437874c89d2f4cea94ca8cbdfb4eed9f20d86fa193c29a17829c26d7ceefae344ac1699cc24ebb8d397fd0937a1043b5177a140c2504c9fda58bb5652
+"ssr-window@npm:^4.0.0, ssr-window@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "ssr-window@npm:4.0.1"
+  checksum: 177baff9535131ab8673d3a63f86e16d1890ea845c89d31cfa71e3a9e89dccf46a7f6a031c31db520f78441155b64d6e2f3c07717ab442ab9e9f7027b9171786
   languageName: node
   linkType: hard
 
@@ -15688,13 +15688,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"swiper@npm:6.8.4":
-  version: 6.8.4
-  resolution: "swiper@npm:6.8.4"
+"swiper@npm:^7.2.0":
+  version: 7.2.0
+  resolution: "swiper@npm:7.2.0"
   dependencies:
-    dom7: ^3.0.0
-    ssr-window: ^3.0.0
-  checksum: 613239e71135b48378453a74abed9a33d56f147e704e3803f5ea960dbf9833a93e557ef0b75e7c2849328eb1b48fafab54f7ac5b88e8c3727283536c7740b13f
+    dom7: ^4.0.1
+    ssr-window: ^4.0.1
+  checksum: 2c7181356bf0bdd7edeec2777d1a90bda54b68d40ce11013a4c79c7014d5c5878c6ca652f8555bec47bbebede68bc82b79a8e31ceb210c2996af08fd44c7d41d
   languageName: node
   linkType: hard
 
