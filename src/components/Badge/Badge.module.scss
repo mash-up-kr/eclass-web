@@ -1,0 +1,16 @@
+@use 'styles/utils' as *;
+
+.badge {
+  @include flexCenter(all);
+
+  width: 2.4rem;
+  height: 2.4rem;
+  color: #f7f7fb;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  line-height: 2.4;
+  background: black;
+  border-radius: 50%;
+  opacity: 0.5;
+}
