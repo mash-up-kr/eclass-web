@@ -3,12 +3,12 @@
 .monthly-diary {
   $self: &;
 
-  margin: calc($header-height-with-safe-area + 16px) 0 55px;
-  padding: 0 14px;
+  margin: calc($header-height-with-safe-area + 1.6rem) 0 5.5rem;
+  padding: 0 1.4rem;
 
   &__list {
     #{$self}__item {
-      margin-top: 14px;
+      margin-top: 1.4rem;
     }
   }
 }
