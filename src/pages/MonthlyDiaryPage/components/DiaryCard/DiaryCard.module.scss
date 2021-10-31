@@ -25,7 +25,8 @@
   }
 
   &__article {
-    display: flex;
+    @include flexSpaceBetween();
+
     margin-top: 2rem;
   }
 
@@ -48,6 +49,8 @@
   }
 
   &__thumbnail {
+    width: 11rem;
+    height: 11rem;
     margin-left: 1.6rem;
     border-radius: 1.6rem;
   }
