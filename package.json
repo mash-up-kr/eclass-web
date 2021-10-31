@@ -8,7 +8,11 @@
   "dependencies": {
     "classnames": "^2.3.1",
     "components": "link:./src/components",
+<<<<<<< HEAD
     "hooks": "link:./src/hooks",
+=======
+    "models": "link:./src/models",
+>>>>>>> 270f6e4 (:sparkles: 다이어리 목록 가져오는 api 추가)
     "modern-css-reset": "^1.4.0",
     "pages": "link:./src/pages",
     "react": "^17.0.2",
@@ -20,8 +24,7 @@
     "recoil": "^0.4.1",
     "swiper": "^7.2.0",
     "swr": "^1.0.1",
-    "utils": "link:./src/utils",
-    "models": "link:./src/models"
+    "utils": "link:./src/utils"
   },
   "devDependencies": {
     "@types/eslint": "^7.28.0",

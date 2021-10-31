@@ -6010,6 +6010,7 @@ __metadata:
     hooks: "link:./src/hooks"
     husky: ^7.0.0
     lint-staged: ^11.1.2
+    models: "link:./src/models"
     modern-css-reset: ^1.4.0
     pages: "link:./src/pages"
     prettier: ^2.4.1
@@ -10911,6 +10912,12 @@ fsevents@^1.2.7:
   checksum: a96865108c6c3b1b8e1d5e9f11843de1e077e57737602de1b82030815f311be11f96f09cce59bd5b903d0b29834733e5313f9301e3ed6d6f6fba2eae0df4298f
   languageName: node
   linkType: hard
+
+"models@link:./src/models::locator=eclass-web%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "models@link:./src/models::locator=eclass-web%40workspace%3A."
+  languageName: node
+  linkType: soft
 
 "modern-css-reset@npm:^1.4.0":
   version: 1.4.0
