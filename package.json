@@ -8,11 +8,9 @@
   "dependencies": {
     "classnames": "^2.3.1",
     "components": "link:./src/components",
-<<<<<<< HEAD
     "hooks": "link:./src/hooks",
-=======
+    "dayjs": "^1.10.7",
     "models": "link:./src/models",
->>>>>>> 270f6e4 (:sparkles: 다이어리 목록 가져오는 api 추가)
     "modern-css-reset": "^1.4.0",
     "pages": "link:./src/pages",
     "react": "^17.0.2",
