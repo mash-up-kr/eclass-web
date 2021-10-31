@@ -47,10 +47,20 @@
     }
   }
 
-  &__thumbnail {
-    width: 11rem;
-    height: 11rem;
-    margin-left: 1.6rem;
-    border-radius: 1.6rem;
+  &__thumbnail-container {
+    position: relative;
+
+    #{$self}__thumbnail {
+      width: 11rem;
+      height: 11rem;
+      margin-left: 1.6rem;
+      border-radius: 1.6rem;
+    }
+
+    #{$self}__badge {
+      position: absolute;
+      top: 8px;
+      right: 9px;
+    }
   }
 }

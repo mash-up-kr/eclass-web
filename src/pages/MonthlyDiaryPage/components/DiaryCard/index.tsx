@@ -4,6 +4,7 @@ import { ReactComponent as MoreHorizontalIcon } from 'assets/ic_more_horizontal.
 import styles from './DiaryCard.module.scss';
 
 import classNames from 'classnames/bind';
+import Badge from 'components/Badge';
 import SVGButton from 'components/SVGButton';
 import React, { useCallback } from 'react';
 import { Diary } from 'models/Diary';
@@ -18,6 +19,9 @@ interface DiaryCardProps {
 
 const DiaryCard = React.memo(({ diary, className, onOpenModal }: DiaryCardProps) => {
   const firstThumbnail = diary.pictureSubmitRequestList[0].imageUrl;
+  const thumbnailCount = diary.pictureSubmitRequestList.length;
+
+  const hasMultipleThumbnail = thumbnailCount > 1;
 
   const handleOpenModal = useCallback(
     (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -40,7 +44,10 @@ const DiaryCard = React.memo(({ diary, className, onOpenModal }: DiaryCardProps)
           <p className={cx('diary-card__content')}>{diary.content}</p>
           <p className={cx('diary-card__extra-content')}>집사 &#183; 댓글12</p>
         </div>
-        <img className={cx('diary-card__thumbnail')} src={firstThumbnail} alt="diary-thumbnail" />
+        <div className={cx('diary-card__thumbnail-container')}>
+          <img className={cx('diary-card__thumbnail')} src={firstThumbnail} alt="diary-thumbnail" />
+          {hasMultipleThumbnail && <Badge className={cx('diary-card__badge')}>{thumbnailCount}</Badge>}
+        </div>
       </div>
     </div>
   );
