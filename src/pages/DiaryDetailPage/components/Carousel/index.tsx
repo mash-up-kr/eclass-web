@@ -15,13 +15,13 @@ const Carousel = () => {
   return (
     <Swiper modules={[Pagination]} className={cx('carousel')} slidesPerView={1} pagination={{ clickable: true }}>
       <SwiperSlide>
-        <img className={cx('carousel__item')} src={DUMMY_DIARY_DOG_IMAGE} alt="" />
+        <canvas className={cx('carousel__item')} style={{ background: `url(${DUMMY_DIARY_DOG_IMAGE})` }} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={DUMMY_DIARY_DOG_IMAGE} alt="" />
+        <canvas className={cx('carousel__item')} style={{ background: `url(${DUMMY_DIARY_DOG_IMAGE})` }} />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={DUMMY_DIARY_DOG_IMAGE} alt="" />
+        <canvas className={cx('carousel__item')} style={{ background: `url(${DUMMY_DIARY_DOG_IMAGE})` }} />
       </SwiperSlide>
       <button type="button" className={cx('carousel__')}>
         스티커 추가
