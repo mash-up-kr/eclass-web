@@ -3,11 +3,11 @@
 .diary-description-header {
   padding: 2.8rem 0 2rem 0;
 
-  &__first-row {
+  &__header {
     @include flexCenter(horizontal);
   }
 
-  &__badge {
+  &__status {
     @include flexCenter(all);
 
     margin-right: 9px;
@@ -22,7 +22,7 @@
     @include overflowTextVertical(2);
   }
 
-  &__second-row {
+  &__sub-header {
     @include flexCenter(horizontal);
 
     color: #a09d96;
