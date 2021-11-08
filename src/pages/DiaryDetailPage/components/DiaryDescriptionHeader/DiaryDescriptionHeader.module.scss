@@ -1,27 +1,37 @@
 @use 'styles/utils' as *;
 
 .diary-description-header {
-  display: flex;
+  padding: 2.8rem 0 2rem 0;
+
+  &__first-row {
+    @include flexCenter(horizontal);
+  }
 
   &__badge {
     @include flexCenter(all);
 
-    margin-right: 8px;
-  }
-
-  &__info {
-    color: #a09d96;
-    font-size: 1.2rem;
-    line-height: 2.1;
+    margin-right: 9px;
   }
 
   &__title {
     color: #484747;
-    font-size: 1.6rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 1.5;
+
+    @include overflowTextVertical(2);
+  }
+
+  &__second-row {
+    @include flexCenter(horizontal);
+
+    color: #a09d96;
+    font-size: 1.2rem;
+    line-height: 1.5;
   }
 
   &__author {
-    &::before {
+    &::after {
       display: inline-block;
       padding: 0 3px;
       color: #a09d96;
