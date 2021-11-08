@@ -9,15 +9,17 @@ const cx = classNames.bind(styles);
 const DiaryDescriptionHeader = () => {
   return (
     <div className={cx('diary-description-header')}>
-      <div className={cx('diary-description-header__badge')}>
-        <GreenDotIcon width="40" height="40" />
+      <div className={cx('diary-description-header__first-row')}>
+        <div className={cx('diary-description-header__badge')}>
+          <GreenDotIcon width="24" height="24" />
+        </div>
+        <h1 className={cx('diary-description-header__title')}>자두자두 졸려요...</h1>
       </div>
-      <div className={cx('diary-description-header__info')}>
-        <h1 className={cx('diary-description-header__title')}>산책 오지게 했다</h1>
-        <time className={cx('diary-description-header__date')} dateTime="2021/08/14">
-          2021.08.14
-        </time>
+      <div className={cx('diary-description-header__second-row')}>
         <span className={cx('diary-description-header__author')}>엄마</span>
+        <time className={cx('diary-description-header__date')} dateTime="2021/08/14">
+          2021. 08. 14
+        </time>
       </div>
     </div>
   );
