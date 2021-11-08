@@ -1,35 +1,24 @@
-@mixin header1 {
-  font-weight: bold;
-  font-size: 1.8rem;
-  line-height: 2.7;
-}
+$font-styles: (
+  header1: 1.8rem bold 2.7,
+  header2: 1.6rem bold 2.1,
+  header3: 1.6rem 500 2.1,
+  body: 1.4rem normal 2.6,
+  subtitle: 1.4rem normal 2.1,
+  small: 1.2rem 500 1.8,
+);
 
-@mixin header2 {
-  font-weight: bold;
-  font-size: 1.6rem;
-  line-height: 2.1;
-}
+@mixin typography($name) {
+  $item: map.get($font-styles, $name);
 
-@mixin header3 {
-  font-weight: 500;
-  font-size: 1.6rem;
-  line-height: 2.1;
-}
+  @if $item == null {
+    @error '`#{$name}` is not a valid font style.';
+  }
 
-@mixin body {
-  font-weight: normal;
-  font-size: 1.4rem;
-  line-height: 2.6;
-}
+  $size: list.nth($item, 1);
+  $weight: list.nth($item, 2);
+  $line-height: list.nth($item, 3);
 
-@mixin subtitle {
-  font-weight: normal;
-  font-size: 1.4rem;
-  line-height: 2.1;
-}
-
-@mixin small {
-  font-weight: 500;
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
 }
