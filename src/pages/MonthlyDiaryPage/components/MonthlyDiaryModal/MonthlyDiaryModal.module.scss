@@ -1,0 +1,20 @@
+@use 'styles/utils' as *;
+@use 'styles/typography' as *;
+@use 'styles/colors' as *;
+
+.modal-item {
+  @include flexCenter(vertical);
+
+  margin-bottom: 2.4rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    @include typography(header3);
+
+    margin-left: 1.4rem;
+    color: $dark;
+  }
+}

@@ -6,20 +6,28 @@ import styles from './DiaryCard.module.scss';
 
 import classNames from 'classnames/bind';
 import SVGButton from 'components/SVGButton';
+import React, { useCallback } from 'react';
 
 const cx = classNames.bind(styles);
 
 interface DiaryCardProps {
   className?: string;
+  onOpenModal?: () => void;
 }
 
-const DiaryCard = ({ className }: DiaryCardProps) => {
+const DiaryCard = ({ className, onOpenModal }: DiaryCardProps) => {
+  const handleOpenModal = useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+
+    onOpenModal?.();
+  }, []);
+
   return (
     <div className={cx('diary-card', { className })}>
       <header className={cx('diary-card__header')}>
         <SVGButton icon={<GreenDotIcon />} />
         <p className={cx('diary-card__date')}>14. SAT</p>
-        <SVGButton icon={<MoreHorizontalIcon />} className={cx('diary-card__more')} />
+        <SVGButton icon={<MoreHorizontalIcon />} className={cx('diary-card__more')} onClick={handleOpenModal} />
       </header>
       <div className={cx('diary-card__article')}>
         <div className={cx('diary-card__summary')}>
