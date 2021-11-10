@@ -6017,6 +6017,7 @@ __metadata:
     react-portal: ^4.2.1
     react-router-dom: ^5.3.0
     react-scripts: 4.0.3
+    react-swipeable: ^6.2.0
     recoil: ^0.4.1
     sass: ^1.42.1
     stylelint: ^13.13.1
@@ -13577,6 +13578,15 @@ fsevents@^1.2.7:
   bin:
     react-scripts: ./bin/react-scripts.js
   checksum: a05a46ce3145b42ac8b57633d3b90b6689c24697c1449bccf219349996d718a3cd0796e4910f4ab6abb5b024982cafd62345e88c8e7b42a45efca3bef1a0eb87
+  languageName: node
+  linkType: hard
+
+"react-swipeable@npm:^6.2.0":
+  version: 6.2.0
+  resolution: "react-swipeable@npm:6.2.0"
+  peerDependencies:
+    react: ^16.8.3 || ^17
+  checksum: 110a046c6ae7a6222ef57c2bfbee1d006c8399224f3f69eecf0a4c6fd42ac346dc5512b108e66189f21c405e476bfd8b5f776b07443cf2d5c76ae6d00207f8af
   languageName: node
   linkType: hard
 
