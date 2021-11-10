@@ -11,9 +11,10 @@ interface OverlayProps {
   align?: Align;
   isOpened: boolean;
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
-const Overlay = ({ isOpened, align = 'center', children }: OverlayProps) => {
+const Overlay = ({ isOpened, align = 'center', children, onClick }: OverlayProps) => {
   return (
     <Portal>
       <div
@@ -24,6 +25,7 @@ const Overlay = ({ isOpened, align = 'center', children }: OverlayProps) => {
           [cx('overlay--visible')]: isOpened,
           [cx('overlay--hidden')]: !isOpened,
         })}
+        onClick={onClick}
       >
         {children}
       </div>

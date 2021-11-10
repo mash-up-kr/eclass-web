@@ -27,7 +27,7 @@ const ModalBottomSheet = ({ isOpened, children, onClose }: ModalBottomSheetProps
   }, [isOpened]);
 
   return (
-    <Overlay align="bottom" isOpened={isOpened}>
+    <Overlay align="bottom" isOpened={isOpened} onClick={onClose}>
       <div
         className={cx('modal-container', {
           [cx('modal-container--visible')]: isOpened,
