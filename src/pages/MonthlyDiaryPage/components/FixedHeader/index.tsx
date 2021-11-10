@@ -6,10 +6,11 @@ import styles from './FixedHeader.module.scss';
 
 import classNames from 'classnames/bind';
 import SVGButton from 'components/SVGButton';
+import React from 'react';
 
 const cx = classNames.bind(styles);
 
-const FixedHeader = () => {
+const FixedHeader = React.memo(() => {
   return (
     <header className={cx('fixed-header')}>
       <SVGButton icon={<LogoIcon />} className={cx('fixed-header__logo')} />
@@ -23,6 +24,6 @@ const FixedHeader = () => {
       </div>
     </header>
   );
-};
+});
 
 export default FixedHeader;
