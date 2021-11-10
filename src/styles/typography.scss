@@ -1,3 +1,5 @@
+@use 'sass:list';
+
 $font-styles: (
   header1: 1.8rem bold 2.7,
   header2: 1.6rem bold 2.1,
@@ -8,7 +10,7 @@ $font-styles: (
 );
 
 @mixin typography($name) {
-  $item: map.get($font-styles, $name);
+  $item: map-get($font-styles, $name);
 
   @if $item == null {
     @error '`#{$name}` is not a valid font style.';

@@ -11,10 +11,15 @@ interface SVGButtonProps {
       }
     >
   >;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const SVGButton = ({ className, icon }: SVGButtonProps) => {
-  return <button className={cx(styles['svg-button'], className)}>{icon}</button>;
+const SVGButton = ({ className, icon, onClick }: SVGButtonProps) => {
+  return (
+    <button className={cx(styles['svg-button'], className)} onClick={onClick}>
+      {icon}
+    </button>
+  );
 };
 
 export default SVGButton;
