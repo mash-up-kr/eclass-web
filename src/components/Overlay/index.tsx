@@ -9,10 +9,11 @@ type Align = 'top' | 'center' | 'bottom';
 
 interface OverlayProps {
   align?: Align;
+  isOpened: boolean;
   children: React.ReactNode;
 }
 
-const Overlay = ({ align = 'center', children }: OverlayProps) => {
+const Overlay = ({ isOpened, align = 'center', children }: OverlayProps) => {
   return (
     <Portal>
       <div
@@ -20,6 +21,8 @@ const Overlay = ({ align = 'center', children }: OverlayProps) => {
           [cx('overlay--top')]: align === 'top',
           [cx('overlay--center')]: align === 'center',
           [cx('overlay--bottom')]: align === 'bottom',
+          [cx('overlay--visible')]: isOpened,
+          [cx('overlay--hidden')]: !isOpened,
         })}
       >
         {children}
