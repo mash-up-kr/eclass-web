@@ -15,12 +15,15 @@ interface DiaryCardProps {
   onOpenModal?: () => void;
 }
 
-const DiaryCard = ({ className, onOpenModal }: DiaryCardProps) => {
-  const handleOpenModal = useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
-    event.preventDefault();
+const DiaryCard = React.memo(({ className, onOpenModal }: DiaryCardProps) => {
+  const handleOpenModal = useCallback(
+    (event: React.MouseEvent<HTMLButtonElement>) => {
+      event.preventDefault();
 
-    onOpenModal?.();
-  }, []);
+      onOpenModal?.();
+    },
+    [onOpenModal]
+  );
 
   return (
     <div className={cx('diary-card', { className })}>
@@ -40,6 +43,6 @@ const DiaryCard = ({ className, onOpenModal }: DiaryCardProps) => {
       </div>
     </div>
   );
-};
+});
 
 export default DiaryCard;

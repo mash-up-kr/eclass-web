@@ -40,6 +40,9 @@
     "react/require-default-props": [0],
     "react/button-has-type": [0],
     "react/jsx-props-no-spreading": "off",
-    "import/prefer-default-export": "off"
+    "import/prefer-default-export": "off",
+    "react/display-name": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
