@@ -1,6 +1,7 @@
 import styles from './Overlay.module.scss';
 
 import classNames from 'classnames/bind';
+import { useEffect } from 'react';
 import { Portal } from 'react-portal';
 
 const cx = classNames.bind(styles);
@@ -15,6 +16,14 @@ interface OverlayProps {
 }
 
 const Overlay = ({ isOpened, align = 'center', children, onClick }: OverlayProps) => {
+  useEffect(() => {
+    if (isOpened) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'visible';
+    }
+  }, [isOpened]);
+
   return (
     <Portal>
       <div
