@@ -8,6 +8,7 @@
   "dependencies": {
     "classnames": "^2.3.1",
     "components": "link:./src/components",
+    "hooks": "link:./src/hooks",
     "modern-css-reset": "^1.4.0",
     "pages": "link:./src/pages",
     "react": "^17.0.2",

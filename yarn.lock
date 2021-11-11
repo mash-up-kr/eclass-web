@@ -6007,6 +6007,7 @@ __metadata:
     eslint-plugin-prettier: ^4.0.0
     eslint-plugin-react: ^7.26.0
     eslint-plugin-react-hooks: ^4.2.0
+    hooks: "link:./src/hooks"
     husky: ^7.0.0
     lint-staged: ^11.1.2
     modern-css-reset: ^1.4.0
@@ -7960,6 +7961,12 @@ fsevents@^1.2.7:
   checksum: b1538270429b13901ee586aa44f4cc3ecd8831c061d06cb8322e50ea17b3f5ce4d0e2e66394761e6c8e152cd8c34fb3b4b690116c6ce2bd45b18c746516cb9e8
   languageName: node
   linkType: hard
+
+"hooks@link:./src/hooks::locator=eclass-web%40workspace%3A.":
+  version: 0.0.0-use.local
+  resolution: "hooks@link:./src/hooks::locator=eclass-web%40workspace%3A."
+  languageName: node
+  linkType: soft
 
 "hoopy@npm:^0.1.4":
   version: 0.1.4
