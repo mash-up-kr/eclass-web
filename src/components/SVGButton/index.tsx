@@ -1,9 +1,9 @@
 import styles from './SVGButton.module.scss';
 
 import cx from 'classnames';
+import React from 'react';
 
-interface SVGButtonProps {
-  className?: string;
+interface SVGButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon: React.ReactElement<
     React.FunctionComponent<
       React.SVGProps<SVGSVGElement> & {
@@ -11,7 +11,6 @@ interface SVGButtonProps {
       }
     >
   >;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const SVGButton = ({ className, icon, onClick }: SVGButtonProps) => {
