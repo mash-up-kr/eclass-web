@@ -11,9 +11,9 @@ interface ModalBottomSheetProps {
   onClose: () => void;
 }
 
-const ModalBottomSheet = ({ isOpened, children, onClose }: ModalBottomSheetProps) => {
-  const cx = classNames.bind(styles);
+const cx = classNames.bind(styles);
 
+const ModalBottomSheet = ({ isOpened, children, onClose }: ModalBottomSheetProps) => {
   const swipeableHandlers = useSwipeable({
     onSwipedDown: onClose,
   });
@@ -30,8 +30,8 @@ const ModalBottomSheet = ({ isOpened, children, onClose }: ModalBottomSheetProps
     <Overlay align="bottom" isOpened={isOpened} onClick={onClose}>
       <div
         className={cx('modal-container', {
-          [cx('modal-container--visible')]: isOpened,
-          [cx('modal-container--hidden')]: !isOpened,
+          'modal-container--visible': isOpened,
+          'modal-container--hidden': !isOpened,
         })}
       >
         <div className={cx('modal-container__scrollable-icon')} {...swipeableHandlers} />

@@ -19,11 +19,11 @@ const Overlay = ({ isOpened, align = 'center', children, onClick }: OverlayProps
     <Portal>
       <div
         className={cx('overlay', {
-          [cx('overlay--top')]: align === 'top',
-          [cx('overlay--center')]: align === 'center',
-          [cx('overlay--bottom')]: align === 'bottom',
-          [cx('overlay--visible')]: isOpened,
-          [cx('overlay--hidden')]: !isOpened,
+          'overlay--top': align === 'top',
+          'overlay--center': align === 'center',
+          'overlay--bottom': align === 'bottom',
+          'overlay--visible': isOpened,
+          'overlay--hidden': !isOpened,
         })}
         onClick={onClick}
       >
