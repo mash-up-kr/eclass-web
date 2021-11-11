@@ -12,15 +12,19 @@
   &--top {
     display: flex;
     align-items: flex-start;
+    justify-content: center;
   }
 
-  &--middle {
+  &--center {
     @include flexCenter(vertical);
+
+    justify-content: center;
   }
 
   &--bottom {
     display: flex;
     align-items: flex-end;
+    justify-content: center;
   }
 
   &--visible {

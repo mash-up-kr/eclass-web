@@ -1,0 +1,48 @@
+@use 'styles/colors' as *;
+@use 'styles/typography' as *;
+
+$border-color: rgb(160, 157, 150, 0.3);
+
+.modal-container {
+  width: calc(100% - 4rem);
+  background-color: white;
+
+  border-radius: 1.4rem;
+
+  &__content {
+    @include typography(body);
+
+    padding: 3.2rem 4.7rem;
+    color: $dark;
+    white-space: pre-line;
+
+    text-align: center;
+  }
+
+  &__footer {
+    display: flex;
+    border-top: 1px solid $border-color;
+
+    &-button {
+      @include typography(header3);
+
+      flex: 1;
+      padding: 1.6rem 0;
+      background-color: transparent;
+
+      border: none;
+
+      &:first-child {
+        border-right: 1px solid $border-color;
+      }
+
+      &--cancel {
+        color: $dark;
+      }
+
+      &--success {
+        color: $orange;
+      }
+    }
+  }
+}
