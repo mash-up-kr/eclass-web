@@ -1,4 +1,3 @@
-import { ReactComponent as GreenDotIcon } from 'assets/ic_green_dot.svg';
 import { ReactComponent as MoreHorizontalIcon } from 'assets/ic_more_horizontal.svg';
 
 import styles from './DiaryCard.module.scss';
@@ -6,6 +5,7 @@ import styles from './DiaryCard.module.scss';
 import classNames from 'classnames/bind';
 import Badge from 'components/Badge';
 import SVGButton from 'components/SVGButton';
+import Thumbnail from 'components/Thumbnail';
 import { Diary } from 'models/Diary';
 import React, { useCallback } from 'react';
 import { formatDate } from 'utils/date';
@@ -50,7 +50,7 @@ const DiaryCard = React.memo(({ diary, className, onOpenModal }: DiaryCardProps)
           <p className={cx('diary-card__extra-content')}>집사 &#183; 댓글12</p>
         </div>
         <div className={cx('diary-card__thumbnail-container')}>
-          <img className={cx('diary-card__thumbnail')} src={firstThumbnail} alt="diary-thumbnail" />
+          <Thumbnail className={cx('diary-card__thumbnail')} src={firstThumbnail} alt="diary-thumbnail" />
           {hasMultipleThumbnail && <Badge className={cx('diary-card__badge')}>{thumbnailCount}</Badge>}
         </div>
       </div>

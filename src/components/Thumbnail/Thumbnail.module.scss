@@ -1,0 +1,8 @@
+@use 'styles/colors' as *;
+@use 'styles/utils' as *;
+
+.error-image {
+  @include flexCenter(all);
+
+  background-color: $light;
+}
