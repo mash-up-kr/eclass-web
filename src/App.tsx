@@ -1,6 +1,7 @@
+import { QueryClient, QueryClientProvider } from 'react-query';
+
 import Toast, { toastTextAtom } from 'components/Toast';
 import { lazy, Suspense } from 'react';
-import { QueryClient, QueryClientProvider } from 'react-query';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 
@@ -22,7 +23,7 @@ const App = () => {
                 <Redirect to="/monthly-diary" />
               </Route>
               <Route exact path="/monthly-diary" component={LazyMonthlyDiaryPage} />
-              <Route exact path="/diary-detail" component={LazyDiaryDetailPage} />
+              <Route exact path="/diary-detail/:diaryId" component={LazyDiaryDetailPage} />
             </Switch>
           </BrowserRouter>
         </Suspense>
