@@ -16,8 +16,10 @@ const MonthlyDiaryPage = () => {
 
   const { diaries } = useMonthlyDiary();
 
+  const isEmptyDiary = diaries.length === 0;
+
   return (
-    <>
+    <div>
       <FixedHeader />
       <div className={cx('monthly-diary')}>
         <ul className={cx('monthly-diary__list')}>
@@ -29,10 +31,12 @@ const MonthlyDiaryPage = () => {
             </li>
           ))}
         </ul>
+
+        {isEmptyDiary && <p className={cx('monthly-diary__empty')}>작성된 일기가 없어요 :(</p>}
       </div>
       <MonthlyDiaryModal isOpened={openedModal === 'MONTHLY_DIARY'} onClose={handleCloseModal} />
       <DatePickerModal isOpened={openedModal === 'DATE_PICKER'} onClose={handleCloseModal} />
-    </>
+    </div>
   );
 };
 
