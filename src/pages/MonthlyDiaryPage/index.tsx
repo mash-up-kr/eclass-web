@@ -25,7 +25,7 @@ const MonthlyDiaryPage = () => {
         <ul className={cx('monthly-diary__list')}>
           {diaries.map((diary) => (
             <li key={diary.diaryId} className={cx('monthly-diary__item')}>
-              <Link to="/diary-detail">
+              <Link to={`/diary-detail/${diary.diaryId}`}>
                 <DiaryCard diary={diary} onOpenModal={handleOpenModal('MONTHLY_DIARY')} />
               </Link>
             </li>
