@@ -22,7 +22,7 @@ const MonthlyDiaryPage = () => {
           {diaries.map((diary) => (
             <li key={diary.diaryId} className={cx('monthly-diary__item')}>
               <Link to="/diary-detail">
-                <DiaryCard diary={diary} />
+                <DiaryCard diary={diary} onOpenModal={handleOpenModal} />
               </Link>
             </li>
           ))}
