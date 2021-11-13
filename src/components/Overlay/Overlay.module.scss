@@ -10,21 +10,19 @@
   background-color: rgba(0, 0, 0, 0.5);
 
   &--top {
-    display: flex;
+    @include flexCenter(horizontal);
+
     align-items: flex-start;
-    justify-content: center;
   }
 
   &--center {
-    @include flexCenter(vertical);
-
-    justify-content: center;
+    @include flexCenter(all);
   }
 
   &--bottom {
-    display: flex;
+    @include flexCenter(horizontal);
+
     align-items: flex-end;
-    justify-content: center;
   }
 
   &--visible {
