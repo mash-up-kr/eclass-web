@@ -6,8 +6,8 @@ import styles from './DiaryCard.module.scss';
 import classNames from 'classnames/bind';
 import Badge from 'components/Badge';
 import SVGButton from 'components/SVGButton';
-import React, { useCallback } from 'react';
 import { Diary } from 'models/Diary';
+import React, { useCallback } from 'react';
 
 const cx = classNames.bind(styles);
 
