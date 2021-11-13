@@ -1,0 +1,12 @@
+.todo-detail-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200vw;
+  padding: 1rem 1.25rem 0 1.25rem;
+
+  &__actions {
+    display: flex;
+    justify-content: space-around;
+  }
+}

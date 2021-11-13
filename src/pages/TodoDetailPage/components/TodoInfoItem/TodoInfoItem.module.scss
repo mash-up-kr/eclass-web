@@ -1,0 +1,16 @@
+.todo-info-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  padding: 0;
+  background-color: transparent;
+
+  &__label {
+    margin-left: 0.875rem;
+    color: #484747;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+  }
+}
