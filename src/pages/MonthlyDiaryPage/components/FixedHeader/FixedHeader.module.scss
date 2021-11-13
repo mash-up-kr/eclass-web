@@ -1,6 +1,3 @@
-@use 'styles/variables' as *;
-@use 'styles/utils' as *;
-
 .fixed-header {
   @include flexSpaceBetween(row);
 
