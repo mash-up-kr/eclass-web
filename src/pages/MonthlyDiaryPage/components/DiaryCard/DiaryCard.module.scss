@@ -1,4 +1,5 @@
 @use 'styles/utils' as *;
+@use 'styles/colors' as *;
 
 .diary-card {
   $self: &;
@@ -9,6 +10,12 @@
 
   &__header {
     @include flexCenter(vertical);
+
+    #{$self}__badge {
+      padding: 8px;
+      background-color: $light;
+      border-radius: 1.4rem;
+    }
 
     #{$self}__date {
       margin-left: 8px;

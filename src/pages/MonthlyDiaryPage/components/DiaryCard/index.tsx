@@ -8,6 +8,7 @@ import Badge from 'components/Badge';
 import SVGButton from 'components/SVGButton';
 import { Diary } from 'models/Diary';
 import React, { useCallback } from 'react';
+import { formatDate } from 'utils/date';
 
 const cx = classNames.bind(styles);
 
@@ -18,8 +19,10 @@ interface DiaryCardProps {
 }
 
 const DiaryCard = React.memo(({ diary, className, onOpenModal }: DiaryCardProps) => {
-  const firstThumbnail = diary.pictureSubmitRequestList[0].imageUrl;
-  const thumbnailCount = diary.pictureSubmitRequestList.length;
+  const { pictureSubmitRequestList, createdAt, badgeResponseDto } = diary;
+
+  const firstThumbnail = pictureSubmitRequestList[0].imageUrl;
+  const thumbnailCount = pictureSubmitRequestList.length;
 
   const hasMultipleThumbnail = thumbnailCount > 1;
 
@@ -35,8 +38,10 @@ const DiaryCard = React.memo(({ diary, className, onOpenModal }: DiaryCardProps)
   return (
     <div className={cx('diary-card', { className })}>
       <header className={cx('diary-card__header')}>
-        <SVGButton icon={<GreenDotIcon />} />
-        <p className={cx('diary-card__date')}>14. SAT</p>
+        <div className={cx('diary-card__badge')}>
+          <img width={20} height={20} src={badgeResponseDto.imageUrl} alt={badgeResponseDto.name} />
+        </div>
+        <p className={cx('diary-card__date')}>{formatDate(createdAt, 'M월 D일 (ddd)')}</p>
         <SVGButton icon={<MoreHorizontalIcon />} className={cx('diary-card__more')} onClick={handleOpenModal} />
       </header>
       <div className={cx('diary-card__article')}>
