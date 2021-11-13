@@ -1,4 +1,3 @@
-/* eslint-disable array-callback-return */
 import { ReactComponent as CaretLeft } from 'assets/ic_caret_left.svg';
 import { ReactComponent as CaretRight } from 'assets/ic_caret_right.svg';
 
@@ -10,6 +9,7 @@ import SVGButton from 'components/SVGButton';
 import dayjs from 'dayjs';
 import { useCallback, useState } from 'react';
 import { atom, useRecoilState } from 'recoil';
+import { getReadableMonth } from 'utils/date';
 
 interface DatePickerModalProps {
   isOpened: boolean;
@@ -21,7 +21,7 @@ const cx = classNames.bind(styles);
 const months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
 const currentYear = dayjs().year();
-const currentMonth = dayjs().month();
+const currentMonth = getReadableMonth(dayjs().month());
 
 export const selectedDateAtom = atom({
   key: 'selectedDateAtom',

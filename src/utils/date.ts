@@ -6,3 +6,7 @@ dayjs.locale('ko');
 type DateTemplate = 'M월 D일 (ddd)';
 
 export const formatDate = (date: string | Date, template: DateTemplate): string => dayjs(date).format(template);
+
+export const getReadableMonth = (month: number) => {
+  return month + 1;
+};

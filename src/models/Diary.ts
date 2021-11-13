@@ -2,6 +2,8 @@ export interface Diary {
   diaryId: number;
   content: string;
   pictureSubmitRequestList: DiaryPicture[];
+  badgeResponseDto: Badge;
+  createdAt: string;
 }
 
 export interface DiaryPicture {
@@ -15,4 +17,10 @@ export interface DiaryPictureSticker {
   stickerId: number;
   stickerX: number;
   stickerY: number;
+}
+
+export interface Badge {
+  badgeId: number;
+  name: string;
+  imageUrl: string;
 }
