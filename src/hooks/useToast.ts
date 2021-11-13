@@ -14,13 +14,16 @@ export const useToast = ({ conditions, message, dependencies }: UseToastParams):
   const setToastText = useSetRecoilState(toastTextAtom);
 
   useEffect(() => {
-    if (conditions.every((condition) => condition)) {
-      setToastText(message);
-
-      setTimeout(() => {
-        setToastText(undefined);
-      }, TOAST_DURATION_TIME);
+    if (!conditions.every((condition) => condition)) {
+      return;
     }
+
+    setToastText(message);
+
+    setTimeout(() => {
+      setToastText(undefined);
+    }, TOAST_DURATION_TIME);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies);
 };
