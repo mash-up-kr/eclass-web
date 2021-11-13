@@ -1,0 +1,43 @@
+@use 'styles/utils' as *;
+@use 'styles/typography' as *;
+@use 'styles/colors' as *;
+
+.modal-container {
+  $self: &;
+
+  padding: 3.2rem 6.3rem 4.5rem;
+  background-color: white;
+  border-radius: 1.2rem;
+
+  &__header {
+    @include flexCenter(all);
+
+    #{$self}__year {
+      @include typography(header1);
+
+      margin: 0 2.4rem;
+      color: $dark;
+    }
+  }
+
+  &__months {
+    display: grid;
+    grid-gap: 3.2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 2.2rem;
+
+    &-item {
+      @include typography(header3);
+
+      padding: 6px 1.2rem;
+      text-align: center;
+      border-radius: 6px;
+
+      &--selected {
+        color: $orange;
+        background: rgba(239, 113, 39, 0.1);
+        border: 1px solid $orange;
+      }
+    }
+  }
+}
