@@ -1,0 +1,47 @@
+@use 'styles/utils' as *;
+@use 'styles/typography' as *;
+@use 'styles/colors' as *;
+
+.calendar {
+  &__header {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__day-name {
+    @include flexCenter(all);
+    @include typography(small);
+
+    color: $sub-dark;
+    opacity: 0.8;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &-item {
+      @include flexCenter(all);
+
+      flex-direction: column;
+
+      width: calc(100% / 7);
+      padding: 6px;
+      color: $dark;
+      font-weight: 500;
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    &-feeling-wrapper {
+      width: 100%;
+      height: 0;
+      margin-top: 1rem;
+      padding-bottom: 100%;
+      background-color: white;
+      border-radius: 1.4rem;
+      opacity: 0.8;
+    }
+  }
+}

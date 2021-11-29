@@ -3,7 +3,7 @@ import 'dayjs/locale/ko';
 
 dayjs.locale('ko');
 
-type DateTemplate = 'M월 D일 (ddd)';
+type DateTemplate = 'M월 D일 (ddd)' | 'd' | 'DD';
 
 export const formatDate = (date: string | Date, template: DateTemplate): string => dayjs(date).format(template);
 

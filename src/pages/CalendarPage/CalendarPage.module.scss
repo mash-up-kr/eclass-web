@@ -1,0 +1,6 @@
+@use 'styles/variables' as *;
+
+.calendar-page {
+  margin-top: calc($header-height-with-safe-area + 1.6rem);
+  padding: 0 2.4rem;
+}
