@@ -1,6 +1,5 @@
-import { selectedDateAtom } from './components/DatePickerModal';
-
 import { getDiaryList } from 'apis/diary';
+import { selectedDateAtom } from 'components/DatePickerModal';
 import { Diary } from 'models/Diary';
 import { useQuery } from 'react-query';
 import { useRecoilValue } from 'recoil';

@@ -1,6 +1,6 @@
 import { ReactComponent as CaretDownIcon } from 'assets/ic_caret_down.svg';
 
-import { selectedDateAtom } from '../DatePickerModal';
+import { selectedDateAtom } from '../../../../components/DatePickerModal';
 
 import styles from './FixedHeader.module.scss';
 

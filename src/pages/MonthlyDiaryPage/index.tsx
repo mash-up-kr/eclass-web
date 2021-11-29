@@ -1,11 +1,10 @@
 import styles from './MonthlyDiaryPage.module.scss';
-import DatePickerModal from './components/DatePickerModal';
 import DiaryCard from './components/DiaryCard';
-import FixedHeader from './components/FixedHeader';
 import MonthlyDiaryModal from './components/MonthlyDiaryModal';
 import useMonthlyDiary from './useMonthlyDiary';
 
 import classNames from 'classnames/bind';
+import MonthHeader from 'components/MonthHeader';
 import { useModal } from 'hooks/useModal';
 import { Link } from 'react-router-dom';
 
@@ -20,7 +19,7 @@ const MonthlyDiaryPage = () => {
 
   return (
     <div>
-      <FixedHeader />
+      <MonthHeader />
       <div className={cx('monthly-diary')}>
         <ul className={cx('monthly-diary__list')}>
           {diaries.map((diary) => (
@@ -35,7 +34,6 @@ const MonthlyDiaryPage = () => {
         {isEmptyDiary && <p className={cx('monthly-diary__empty')}>작성된 일기가 없어요 :(</p>}
       </div>
       <MonthlyDiaryModal isOpened={openedModal === 'MONTHLY_DIARY'} onClose={handleCloseModal} />
-      <DatePickerModal isOpened={openedModal === 'DATE_PICKER'} onClose={handleCloseModal} />
     </div>
   );
 };
