@@ -44,4 +44,11 @@
       opacity: 0.8;
     }
   }
+
+  &__day--selected {
+    padding: 0 9px;
+    color: white;
+    background-color: $orange;
+    border-radius: 3.5rem;
+  }
 }
