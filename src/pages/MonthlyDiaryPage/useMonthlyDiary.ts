@@ -7,7 +7,7 @@ import { fetcher } from 'utils/fetcher';
 
 type DiaryListResponse = Diary[];
 
-const API_URL = 'http://server.jonghyeon.com/api/v1/diary/list';
+const API_URL = 'https://server.jonghyeon.com/api/v1/diary/list';
 
 const useMonthlyDiary = () => {
   const { year, month } = useRecoilValue(selectedDateAtom);
