@@ -1,0 +1,22 @@
+@use 'styles/typography' as *;
+@use 'styles/colors' as *;
+@use 'styles/utils' as *;
+
+.todo-item {
+  width: 100%;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 1.2rem;
+
+  &__title {
+    @include typography(header3);
+
+    color: $dark;
+  }
+
+  &__description {
+    @include typography(body);
+
+    color: $sub-dark;
+  }
+}
