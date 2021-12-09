@@ -1,18 +1,16 @@
 import { selectedDateAtom } from './components/DatePickerModal';
 
+import { getDiaryList } from 'apis/diary';
 import { Diary } from 'models/Diary';
+import { useQuery } from 'react-query';
 import { useRecoilValue } from 'recoil';
-import useSWR from 'swr';
-import { fetcher } from 'utils/fetcher';
 
 type DiaryListResponse = Diary[];
-
-const API_URL = 'https://server.jonghyeon.com/api/v1/diary/list';
 
 const useMonthlyDiary = () => {
   const { year, month } = useRecoilValue(selectedDateAtom);
 
-  const { data, error } = useSWR<DiaryListResponse>(`${API_URL}?year=${year}&month=${month}`, fetcher);
+  const { data, error } = useQuery<DiaryListResponse>('diaryList', () => getDiaryList(year, month));
 
   return {
     diaries: data ?? [],
