@@ -1,7 +1,7 @@
 import { Nullable } from 'utils/type';
 
 interface JsInterface {
-  getToken(): Nullable<string>;
+  getToken(): string;
 }
 
 declare global {
