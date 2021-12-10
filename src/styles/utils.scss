@@ -1,7 +1,7 @@
 $z-index: (
   toast: 102,
   modal: 101,
-  fixed-header: 100,
+  sticky-header: 100,
 );
 
 @mixin flexCenter($direction) {

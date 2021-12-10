@@ -1,19 +1,19 @@
 @use 'styles/variables' as *;
 @use 'styles/utils' as *;
 
-.fixed-header {
+.sticky-header {
   @include flexCenter(horizontal);
 
   $self: &;
 
-  position: fixed;
+  position: sticky;
   top: 0;
-  z-index: z-index(fixed-header);
+  z-index: z-index(sticky-header);
   align-items: center;
   width: 100%;
   height: $header-height-with-safe-area;
-  padding: $safe-area-inset-top 2rem 0;
-  background-color: inherit;
+  padding: 0 2rem 0;
+  background-color: #fdf7ea;
 
   &__logo {
     flex: 1;
