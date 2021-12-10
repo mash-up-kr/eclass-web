@@ -1,13 +1,11 @@
+import { getDiaryDetail } from 'apis';
 import { Diary } from 'models/Diary';
-import useSWR from 'swr';
-import { fetcher } from 'utils/fetcher';
+import { useQuery } from 'react-query';
 
 type DiaryDetailResponse = Diary;
 
-const API_URL = 'http://server.jonghyeon.com/api/v1/diary';
-
 const useDiaryDetail = (diaryId: string) => {
-  const { data, error } = useSWR<DiaryDetailResponse>(`${API_URL}/${diaryId}`, fetcher);
+  const { data, error } = useQuery<DiaryDetailResponse>(['diaryDetail', { diaryId }], () => getDiaryDetail(diaryId));
 
   return { diaryDetail: data, error };
 };
