@@ -1,14 +1,13 @@
 import 'swiper/swiper.scss';
 import 'swiper/modules/pagination/pagination.scss';
 
-import DUMMY_DIARY_DOG_IMAGE from 'assets/img_dummy_diary_dog.png';
 import DUMMY_STICKER from 'assets/sticker/ic_socks.svg';
 
 import styles from './Carousel.module.scss';
 
 import classNames from 'classnames/bind';
 import { DiaryPicture } from 'models/Diary';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 
@@ -21,28 +20,39 @@ interface CarouselProps {
 const Carousel = ({ pictureSubmitRequestList }: CarouselProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+
   useEffect(() => {
+    const currentPicture = pictureSubmitRequestList[activeSlideIndex];
+
     if (!canvasRef.current) return;
     const ctx = canvasRef.current.getContext('2d');
     if (!ctx) return;
 
-    pictureSubmitRequestList[0].attachedStickerDtoList.forEach((sticker) => {
+    currentPicture.attachedStickerDtoList.forEach((diaryPictureSticker) => {
       const image = new Image();
       image.src = DUMMY_STICKER;
+
       image.onload = () => {
-        ctx.drawImage(image, sticker.stickerX, sticker.stickerY, 50, 60);
+        ctx.drawImage(image, diaryPictureSticker.stickerX, diaryPictureSticker.stickerY, 50, 60);
       };
     });
-  }, [pictureSubmitRequestList]);
+  }, [activeSlideIndex, pictureSubmitRequestList]);
 
   return (
-    <Swiper modules={[Pagination]} className={cx('carousel')} slidesPerView={1} pagination={{ clickable: true }}>
+    <Swiper
+      modules={[Pagination]}
+      className={cx('carousel')}
+      slidesPerView={1}
+      onSlideChange={(e) => setActiveSlideIndex(e.realIndex)}
+      pagination={{ clickable: true }}
+    >
       {pictureSubmitRequestList.map((diaryPicture) => (
         <SwiperSlide key={diaryPicture.diaryPictureId}>
           <canvas
             ref={canvasRef}
             className={cx('carousel__item')}
-            style={{ backgroundImage: `url(${DUMMY_DIARY_DOG_IMAGE})` }}
+            style={{ backgroundImage: `url(${diaryPicture.imageUrl})` }}
           />
         </SwiperSlide>
       ))}
