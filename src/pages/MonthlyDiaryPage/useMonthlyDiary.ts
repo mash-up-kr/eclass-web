@@ -10,7 +10,7 @@ type DiaryListResponse = Diary[];
 const useMonthlyDiary = () => {
   const { year, month } = useRecoilValue(selectedDateAtom);
 
-  const { data, error } = useQuery<DiaryListResponse>('diaryList', () => getDiaryList(year, month));
+  const { data, error } = useQuery<DiaryListResponse>(['diaryList', { year, month }], () => getDiaryList(year, month));
 
   return {
     diaries: data ?? [],
