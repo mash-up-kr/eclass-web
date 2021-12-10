@@ -42,7 +42,12 @@ const Carousel = ({ pictureSubmitRequestList }: CarouselProps) => {
 
       {pictureSubmitRequestList.map((diaryPicture) => (
         <SwiperSlide className={cx('carousel__item')} key={diaryPicture.diaryPictureId}>
-          <Thumbnail className={cx('carousel__item-thumbnail')} src={diaryPicture.imageUrl} />
+          <Thumbnail
+            className={cx('carousel__item-thumbnail')}
+            src={diaryPicture.imageUrl}
+            errorBackgroundColor="#DDDDDD"
+            errorIconSize={{ width: 48, height: 48 }}
+          />
           {currentPicture.attachedStickerDtoList.map((diaryPictureSticker) => (
             <img
               style={{ top: `${diaryPictureSticker.stickerY}%`, left: `${diaryPictureSticker.stickerX}%` }}
