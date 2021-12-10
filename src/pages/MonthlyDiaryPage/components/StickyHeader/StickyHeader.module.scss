@@ -12,7 +12,7 @@
   align-items: center;
   width: 100%;
   height: $header-height-with-safe-area;
-  padding: 0 2rem 0;
+  padding: $safe-area-inset-top 2rem 0;
   background-color: #fdf7ea;
 
   &__logo {

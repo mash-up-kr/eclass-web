@@ -1,10 +1,11 @@
 @use 'styles/utils' as *;
+@use 'styles/variables' as *;
 
 $background-color: #f6f4f1;
 
 .diary-detail-page {
   &__main {
-    min-height: 100vh;
+    min-height: $min-height-viewport;
     background-color: $background-color;
   }
 
