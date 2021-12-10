@@ -21,6 +21,8 @@ interface CarouselProps {
   pictureSubmitRequestList: DiaryPicture[];
 }
 
+// MEMO(@mango906): 주석쳐져 있는 요소들은 배포를 위해 미구현된 기능을 잠시 가린 주석입니다.
+
 const Carousel = ({ pictureSubmitRequestList }: CarouselProps) => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
@@ -52,9 +54,9 @@ const Carousel = ({ pictureSubmitRequestList }: CarouselProps) => {
           ))}
         </SwiperSlide>
       ))}
-      <button className={cx('carousel__add-btn')} type="button">
+      {/* <button className={cx('carousel__add-btn')} type="button">
         스티커 추가
-      </button>
+      </button> */}
     </Swiper>
   );
 };
