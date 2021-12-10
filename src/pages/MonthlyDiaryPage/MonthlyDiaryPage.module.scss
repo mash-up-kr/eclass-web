@@ -3,15 +3,25 @@
 @use 'styles/typography' as *;
 @use 'styles/colors' as *;
 
+$background-color: #fdf7ea;
+
 .monthly-diary {
   $self: &;
 
-  margin: 0 0 5.5rem;
-  padding: 0 1.4rem;
+  min-height: calc(100vh - $header-height-with-safe-area);
+
+  padding: 0 1.4rem 1.4rem;
+  background-color: $background-color;
 
   &__list {
+    margin: 0;
+
     #{$self}__item {
-      margin-top: 1.4rem;
+      margin-bottom: 1.4rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 

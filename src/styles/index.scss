@@ -1,8 +1,6 @@
 @use 'modern-css-reset';
 @use 'styles/font.scss';
 
-$background-color: #fdf7ea;
-
 * {
   font-family: 'SF Pro Display', 'Noto Sans KR', system-ui;
   user-select: none;
@@ -23,7 +21,6 @@ body {
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -o-text-size-adjust: 100%;
-  background-color: $background-color;
 }
 
 #root {

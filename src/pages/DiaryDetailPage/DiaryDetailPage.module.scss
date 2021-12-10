@@ -1,6 +1,13 @@
 @use 'styles/utils' as *;
 
+$background-color: #f6f4f1;
+
 .diary-detail-page {
+  &__main {
+    min-height: 100vh;
+    background-color: $background-color;
+  }
+
   &__footer {
     position: fixed;
     bottom: 0;
