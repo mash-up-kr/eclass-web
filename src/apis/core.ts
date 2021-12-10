@@ -1,4 +1,10 @@
 import axios, { AxiosInstance, AxiosRequestConfig } from 'axios';
+import { Sticker } from 'models/Sticker';
+
+type StickerResponse = Sticker[];
+
+// eslint-disable-next-line import/no-mutable-exports
+let Stickers: StickerResponse = [];
 
 const axiosInstance: AxiosInstance = axios.create({
   baseURL: 'https://server.jonghyeon.com/api/v1',
@@ -9,4 +15,8 @@ const axiosInstance: AxiosInstance = axios.create({
 
 const fetcher = (params: AxiosRequestConfig) => axiosInstance(params).then((res) => res.data);
 
-export default fetcher;
+axiosInstance.get<StickerResponse>('/sticker').then(({ data }) => {
+  Stickers = data ?? [];
+});
+
+export { fetcher, Stickers };

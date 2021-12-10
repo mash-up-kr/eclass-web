@@ -1,8 +1,6 @@
 import 'swiper/swiper.scss';
 import 'swiper/modules/pagination/pagination.scss';
 
-import DUMMY_STICKER from 'assets/sticker/ic_socks.svg';
-
 import styles from './Carousel.module.scss';
 
 import classNames from 'classnames/bind';
@@ -11,6 +9,7 @@ import { DiaryPicture } from 'models/Diary';
 import { useState } from 'react';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
+import { getStickerImage } from 'utils/sticker';
 
 const cx = classNames.bind(styles);
 
@@ -39,7 +38,7 @@ const Carousel = ({ pictureSubmitRequestList }: CarouselProps) => {
               style={{ top: `${diaryPictureSticker.stickerY}%`, left: `${diaryPictureSticker.stickerX}%` }}
               key={diaryPictureSticker.stickerId}
               className={cx('carousel__item-sticker')}
-              src={DUMMY_STICKER}
+              src={getStickerImage(diaryPictureSticker.stickerId)}
               alt="sticker"
             />
           ))}
