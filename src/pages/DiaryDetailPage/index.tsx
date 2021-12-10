@@ -8,6 +8,8 @@ import { useParams } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
+// MEMO(@mango906): 주석쳐져 있는 요소들은 배포를 위해 미구현된 기능을 잠시 가린 주석입니다.
+
 const DiaryDetailPage = () => {
   const { diaryId } = useParams<{ diaryId: string }>();
   const { diaryDetail } = useDiaryDetail(diaryId);
@@ -22,7 +24,7 @@ const DiaryDetailPage = () => {
         <Carousel pictureSubmitRequestList={pictureSubmitRequestList} />
         <DiaryDescription createdAt={createdAt} content={content} badgeResponseDto={badgeResponseDto} />
       </main>
-      <footer className={cx('diary-detail-page__footer')} />
+      {/* <footer className={cx('diary-detail-page__footer')} /> */}
     </>
   );
 };
