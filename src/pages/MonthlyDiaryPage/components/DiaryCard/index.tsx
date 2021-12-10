@@ -46,7 +46,7 @@ const DiaryCard = React.memo(({ diary, className, onOpenModal }: DiaryCardProps)
       <div className={cx('diary-card__article')}>
         <div className={cx('diary-card__summary')}>
           <p className={cx('diary-card__content')}>{diary.content}</p>
-          <p className={cx('diary-card__extra-content')}>집사 &#183; 댓글12</p>
+          {/* <p className={cx('diary-card__extra-content')}>집사 &#183; 댓글12</p> */}
         </div>
         <div className={cx('diary-card__thumbnail-container')}>
           <Thumbnail className={cx('diary-card__thumbnail')} src={firstThumbnail} alt="diary-thumbnail" />
