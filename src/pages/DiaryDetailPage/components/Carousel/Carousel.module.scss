@@ -1,4 +1,6 @@
 .carousel {
+  position: relative;
+
   :global(.swiper-pagination-bullets) {
     position: absolute;
     bottom: 1.8rem !important;
@@ -9,6 +11,13 @@
     height: 6px;
     margin: 0 2.5px !important;
     background: #fff;
+  }
+
+  &__back-btn {
+    position: absolute;
+    top: 2.4rem;
+    left: 2.4rem;
+    z-index: 1;
   }
 
   &__item {
@@ -29,7 +38,7 @@
     }
   }
 
-  button {
+  &__add-btn {
     position: absolute;
     right: 2rem;
     bottom: 1.8rem;

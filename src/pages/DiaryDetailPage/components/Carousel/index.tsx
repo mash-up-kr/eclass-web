@@ -1,12 +1,16 @@
 import 'swiper/swiper.scss';
 import 'swiper/modules/pagination/pagination.scss';
 
+import { ReactComponent as CaretLeft } from 'assets/ic_caret_left.svg';
+
 import styles from './Carousel.module.scss';
 
 import classNames from 'classnames/bind';
+import SVGButton from 'components/SVGButton';
 import Thumbnail from 'components/Thumbnail';
 import { DiaryPicture } from 'models/Diary';
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 import { getStickerImage } from 'utils/sticker';
@@ -22,6 +26,8 @@ const Carousel = ({ pictureSubmitRequestList }: CarouselProps) => {
 
   const currentPicture = pictureSubmitRequestList[activeSlideIndex];
 
+  const { goBack } = useHistory();
+
   return (
     <Swiper
       modules={[Pagination]}
@@ -30,6 +36,8 @@ const Carousel = ({ pictureSubmitRequestList }: CarouselProps) => {
       onSlideChange={(e) => setActiveSlideIndex(e.realIndex)}
       pagination={{ clickable: true }}
     >
+      <SVGButton className={cx('carousel__back-btn')} icon={<CaretLeft />} onClick={() => goBack()} />
+
       {pictureSubmitRequestList.map((diaryPicture) => (
         <SwiperSlide className={cx('carousel__item')} key={diaryPicture.diaryPictureId}>
           <Thumbnail className={cx('carousel__item-thumbnail')} src={diaryPicture.imageUrl} />
@@ -44,7 +52,9 @@ const Carousel = ({ pictureSubmitRequestList }: CarouselProps) => {
           ))}
         </SwiperSlide>
       ))}
-      <button type="button">스티커 추가</button>
+      <button className={cx('carousel__add-btn')} type="button">
+        스티커 추가
+      </button>
     </Swiper>
   );
 };
