@@ -3,13 +3,10 @@
 @use 'styles/typography' as *;
 @use 'styles/colors' as *;
 
-$margin-top: calc($header-height-with-safe-area + 1.6rem);
-
 .monthly-diary {
   $self: &;
 
-  height: calc(100vh - $margin-top - 5.5rem);
-  margin: $margin-top 0 5.5rem;
+  margin: 0 0 5.5rem;
   padding: 0 1.4rem;
 
   &__list {

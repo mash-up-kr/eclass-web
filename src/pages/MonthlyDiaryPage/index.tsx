@@ -1,8 +1,8 @@
 import styles from './MonthlyDiaryPage.module.scss';
 import DatePickerModal from './components/DatePickerModal';
 import DiaryCard from './components/DiaryCard';
-import FixedHeader from './components/FixedHeader';
 import MonthlyDiaryModal from './components/MonthlyDiaryModal';
+import StickyHeader from './components/StickyHeader';
 import useMonthlyDiary from './useMonthlyDiary';
 
 import classNames from 'classnames/bind';
@@ -20,7 +20,7 @@ const MonthlyDiaryPage = () => {
 
   return (
     <div>
-      <FixedHeader />
+      <StickyHeader />
       <div className={cx('monthly-diary')}>
         <ul className={cx('monthly-diary__list')}>
           {diaries.map((diary) => (
