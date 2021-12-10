@@ -6,8 +6,9 @@ import DUMMY_STICKER from 'assets/sticker/ic_socks.svg';
 import styles from './Carousel.module.scss';
 
 import classNames from 'classnames/bind';
+import Thumbnail from 'components/Thumbnail';
 import { DiaryPicture } from 'models/Diary';
-import { useRef, useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react/swiper-react';
 
@@ -18,26 +19,9 @@ interface CarouselProps {
 }
 
 const Carousel = ({ pictureSubmitRequestList }: CarouselProps) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
-  useEffect(() => {
-    const currentPicture = pictureSubmitRequestList[activeSlideIndex];
-
-    if (!canvasRef.current) return;
-    const ctx = canvasRef.current.getContext('2d');
-    if (!ctx) return;
-
-    currentPicture.attachedStickerDtoList.forEach((diaryPictureSticker) => {
-      const image = new Image();
-      image.src = DUMMY_STICKER;
-
-      image.onload = () => {
-        ctx.drawImage(image, diaryPictureSticker.stickerX, diaryPictureSticker.stickerY, 50, 60);
-      };
-    });
-  }, [activeSlideIndex, pictureSubmitRequestList]);
+  const currentPicture = pictureSubmitRequestList[activeSlideIndex];
 
   return (
     <Swiper
@@ -48,12 +32,17 @@ const Carousel = ({ pictureSubmitRequestList }: CarouselProps) => {
       pagination={{ clickable: true }}
     >
       {pictureSubmitRequestList.map((diaryPicture) => (
-        <SwiperSlide key={diaryPicture.diaryPictureId}>
-          <canvas
-            ref={canvasRef}
-            className={cx('carousel__item')}
-            style={{ backgroundImage: `url(${diaryPicture.imageUrl})` }}
-          />
+        <SwiperSlide className={cx('carousel__item')} key={diaryPicture.diaryPictureId}>
+          <Thumbnail className={cx('carousel__item-thumbnail')} src={diaryPicture.imageUrl} />
+          {currentPicture.attachedStickerDtoList.map((diaryPictureSticker) => (
+            <img
+              style={{ top: `${diaryPictureSticker.stickerY}%`, left: `${diaryPictureSticker.stickerX}%` }}
+              key={diaryPictureSticker.stickerId}
+              className={cx('carousel__item-sticker')}
+              src={DUMMY_STICKER}
+              alt="sticker"
+            />
+          ))}
         </SwiperSlide>
       ))}
       <button type="button">스티커 추가</button>

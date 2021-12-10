@@ -47,8 +47,6 @@ const DatePickerModal = ({ isOpened, onClose }: DatePickerModalProps) => {
 
   const handleSelectMonth = useCallback(
     (month: number) => () => {
-      console.log('month333', month);
-
       setSelectedDate({
         year: selectedYear,
         month,
